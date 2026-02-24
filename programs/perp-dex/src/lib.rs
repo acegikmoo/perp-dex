@@ -1,13 +1,12 @@
 pub mod constants;
+pub use constants::*;
 pub mod error;
 pub mod instructions;
-pub mod state;
+pub use instructions::*;
+pub mod states;
+pub use states::*;
 
 use anchor_lang::prelude::*;
-
-pub use constants::*;
-pub use instructions::*;
-pub use state::*;
 
 declare_id!("4XBXLs3VgWs9ThtDXT13PxauTxSaGTq9frHvGPAN6TSn");
 
@@ -15,7 +14,7 @@ declare_id!("4XBXLs3VgWs9ThtDXT13PxauTxSaGTq9frHvGPAN6TSn");
 pub mod perp_dex {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
+    pub fn initialize_state(ctx: Context<InitializeState>, perp_fee: u64) -> Result<()> {
+        instructions::initialize_state(ctx, perp_fee)
     }
 }
