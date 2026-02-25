@@ -9,7 +9,7 @@ pub struct InitializeState<'info> {
     #[account(
         init,
         seeds = [b"drift_state".as_ref()],
-        space = State::INIT_SPACE,
+        space = 8 + State::INIT_SPACE,
         bump,
         payer = admin
     )]

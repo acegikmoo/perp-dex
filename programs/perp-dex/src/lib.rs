@@ -1,12 +1,13 @@
-pub mod constants;
-pub use constants::*;
-pub mod error;
-pub mod instructions;
-pub use instructions::*;
-pub mod states;
-pub use states::*;
-
 use anchor_lang::prelude::*;
+
+mod states;
+use states::*;
+mod instructions;
+use instructions::*;
+mod error;
+use error::*;
+mod utils;
+use utils::*;
 
 declare_id!("4XBXLs3VgWs9ThtDXT13PxauTxSaGTq9frHvGPAN6TSn");
 
