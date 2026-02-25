@@ -18,4 +18,8 @@ pub mod perp_dex {
     pub fn initialize_state(ctx: Context<InitializeState>, perp_fee: u64) -> Result<()> {
         instructions::initialize_state(ctx, perp_fee)
     }
+
+    pub fn initialize_user(ctx: Context<InitializeUser>, account_id: u16) -> Result<()> {
+        handle_initialize_user(ctx, account_id)
+    }
 }
