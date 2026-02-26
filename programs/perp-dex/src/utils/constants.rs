@@ -14,7 +14,7 @@ pub const DEFAULT_LEVERAGE: u64 = 1;
 pub const MIN_ORDER_AMOUNT: u64 = 1;
 
 // Cap on concurrent open orders per user
-pub const MAX_ORDERS_PER_USER: usize = 16;
+pub const MAX_ORDERS_PER_USER: usize = 8;
 
 // Cap on active market positions per user
 pub const MAX_POSITIONS_PER_USER: usize = 8;

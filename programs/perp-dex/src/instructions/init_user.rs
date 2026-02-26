@@ -11,7 +11,7 @@ pub struct InitializeUser<'info> {
         bump,
         payer = payer
     )]
-    pub user: Account<'info, User>,
+    pub user: Box<Account<'info, User>>,
 
     #[account(mut)]
     pub state: Account<'info, State>,
