@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 
 #[account]
-#[derive(InitSpace, Debug)]
+#[derive(InitSpace)]
 pub struct State {
     pub admin: Pubkey,
     pub no_of_markets: u64,

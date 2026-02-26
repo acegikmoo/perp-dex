@@ -9,7 +9,7 @@ use error::*;
 mod utils;
 use utils::*;
 
-declare_id!("4XBXLs3VgWs9ThtDXT13PxauTxSaGTq9frHvGPAN6TSn");
+declare_id!("QtgyU3YMAjsgbrZuqhNEkgyqyjuqnunSbqbSiZdrLsn");
 
 #[program]
 pub mod perp_dex {
@@ -21,5 +21,12 @@ pub mod perp_dex {
 
     pub fn initialize_user(ctx: Context<InitializeUser>, account_id: u16) -> Result<()> {
         handle_initialize_user(ctx, account_id)
+    }
+
+    pub fn initialize_perp_market(
+        ctx: Context<InitializePerpMarket>,
+        params: InitializeMarketParams,
+    ) -> Result<()> {
+        handle_initialize_perp_market(ctx, params)
     }
 }

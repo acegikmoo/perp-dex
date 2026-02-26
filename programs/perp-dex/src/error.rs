@@ -8,4 +8,10 @@ pub enum ErrorCode {
     MaxNumberOfPositions,
     #[msg("User has no position in market")]
     UserHasNoPositionInMarket,
+    #[msg("Invalid Market Index")]
+    InvalidMarketIndex,
+    #[msg("Invalid Leverage")]
+    InvalidLeverage,
+    #[msg("Invalid Amount")]
+    InvalidAmount,
 }
