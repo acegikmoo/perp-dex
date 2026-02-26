@@ -29,4 +29,12 @@ pub mod perp_dex {
     ) -> Result<()> {
         handle_initialize_perp_market(ctx, params)
     }
+
+    pub fn deposit(ctx: Context<Deposit>, market_index: u16, amount: u64) -> Result<()> {
+        handle_deposit(ctx, market_index, amount)
+    }
+
+    pub fn withdraw(ctx: Context<Withdraw>, market_index: u16, amount: u64) -> Result<()> {
+        handle_withdraw(ctx, market_index, amount)
+    }
 }

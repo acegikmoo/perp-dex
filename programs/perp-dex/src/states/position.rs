@@ -38,7 +38,7 @@ impl Default for PerpPosition {
     }
 }
 
-pub type PerpPositions = [PerpPosition; 8];
+pub type PerpPositions = [PerpPosition; 16];
 
 pub fn add_new_position(positions: &mut PerpPositions, market_index: u16) -> Result<usize> {
     let idx = positions
