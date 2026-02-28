@@ -37,4 +37,28 @@ pub mod perp_dex {
     pub fn withdraw(ctx: Context<Withdraw>, market_index: u16, amount: u64) -> Result<()> {
         handle_withdraw(ctx, market_index, amount)
     }
+
+    pub fn initialize_oracle(
+        ctx: Context<InitializeOracle>,
+        market_index: u16,
+        initial_price: u64,
+        confidence_interval: u64,
+        max_price_deviation: u64,
+    ) -> Result<()> {
+        handle_initialize_oracle(
+            ctx,
+            market_index,
+            initial_price,
+            confidence_interval,
+            max_price_deviation,
+        )
+    }
+
+    pub fn update_oracle_price(
+        ctx: Context<UpdateOraclePrice>,
+        market_index: u16,
+        new_price: u64,
+    ) -> Result<()> {
+        handle_update_oracle_price(ctx, market_index, new_price)
+    }
 }

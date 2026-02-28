@@ -12,3 +12,6 @@ pub use deposit::*;
 
 mod withdraw;
 pub use withdraw::*;
+
+mod init_oracle;
+pub use init_oracle::*;

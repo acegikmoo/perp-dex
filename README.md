@@ -7,6 +7,7 @@
 - [x] Market account + initialize
 - [x] User, Order, Position accounts
 - [x] Deposit and withdraw
+- [x] Oracle init
 - [ ] Place order
 - [ ] Fill with AMM
 - [ ] Fill with order matching

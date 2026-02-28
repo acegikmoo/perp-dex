@@ -15,3 +15,6 @@ pub use amm::*;
 
 mod market;
 pub use market::*;
+
+mod oracle;
+pub use oracle::*;

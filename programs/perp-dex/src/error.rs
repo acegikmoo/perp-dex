@@ -14,4 +14,10 @@ pub enum ErrorCode {
     InvalidLeverage,
     #[msg("Invalid Amount")]
     InvalidAmount,
+    #[msg("Unauthorized")]
+    Unauthorized,
+    #[msg("Price Deviation Too High")]
+    PriceDeviationTooHigh,
+    #[msg("The oracle price is stale")]
+    StaleOraclePrice,
 }
