@@ -2,22 +2,46 @@ use anchor_lang::prelude::*;
 
 #[error_code]
 pub enum ErrorCode {
-    #[msg("Arithmetic Overlow")]
-    ArithmeticOverflow,
-    #[msg("Maximum number of Positions")]
-    MaxNumberOfPositions,
-    #[msg("User has no position in market")]
-    UserHasNoPositionInMarket,
     #[msg("Invalid Market Index")]
     InvalidMarketIndex,
-    #[msg("Invalid Leverage")]
-    InvalidLeverage,
+    #[msg("Invalid Token Account")]
+    InvalidTokenAccount,
+    #[msg("Invalid Mint")]
+    InvalidMint,
     #[msg("Invalid Amount")]
     InvalidAmount,
+    #[msg("Invalid Oracle")]
+    InvalidOracle,
+    #[msg("Invalid AMM")]
+    InvalidAmm,
+    #[msg("Insufficient Accounts")]
+    InsufficientAccounts,
+    #[msg("Max Number Of Positions")]
+    MaxNumberOfPositions,
+    #[msg("Max Number Of Orders")]
+    MaxNumberOfOrders,
+    #[msg("User Has No Position In Market")]
+    UserHasNoPositionInMarket,
+    #[msg("User Has No Order In Market")]
+    UserHasNoOrderInMarket,
+    #[msg("Invalid Leverage")]
+    InvalidLeverage,
+    #[msg("Invalid Price")]
+    InvalidPrice,
+    #[msg("Order Not Found")]
+    OrderNotFound,
+    #[msg("Invalid User Map")]
+    InvalidUserMap,
+    #[msg("Invalid Maker Key")]
+    InvalidMakerKey,
+    #[msg("Arithmetic Overflow")]
+    ArithmeticOverflow,
+    #[msg("Invalid Direction")]
+    InvalidDirection,
     #[msg("Unauthorized")]
     Unauthorized,
     #[msg("Price Deviation Too High")]
     PriceDeviationTooHigh,
-    #[msg("The oracle price is stale")]
+    #[msg("Stale Oracle Price")]
     StaleOraclePrice,
 }

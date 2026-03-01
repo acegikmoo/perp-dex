@@ -5,7 +5,6 @@ use states::*;
 mod instructions;
 use instructions::*;
 mod error;
-use error::*;
 mod utils;
 use utils::*;
 
@@ -60,5 +59,13 @@ pub mod perp_dex {
         new_price: u64,
     ) -> Result<()> {
         handle_update_oracle_price(ctx, market_index, new_price)
+    }
+
+    pub fn place_order(ctx: Context<PlaceOrder>, order_params: OrderParams) -> Result<()> {
+        handle_place_order(ctx, order_params)
+    }
+
+    pub fn fill_order(ctx: Context<FillOrder>, order_id: Option<u64>) -> Result<()> {
+        handle_fill_order(ctx, order_id)
     }
 }

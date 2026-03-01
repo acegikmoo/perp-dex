@@ -61,4 +61,22 @@ impl Amm {
         self.amm_price = self.quote_asset_reserve / self.base_asset_reserve;
         Ok(())
     }
+
+    pub fn get_weighted_price(&self, oracle_price: u64) -> u64 {
+        if self.oracle_price_weight == 0 {
+            return self.amm_price;
+        }
+        if self.oracle_price_weight >= 10000 {
+            return oracle_price;
+        }
+        let amm_weight = 10000 - self.oracle_price_weight;
+        ((oracle_price * self.oracle_price_weight) + (self.amm_price * amm_weight)) / 10000
+    }
+
+    pub fn update_oracle_price_weight(&mut self, new_weight: u64) -> Result<()> {
+        require!(new_weight <= 10000, ErrorCode::InvalidAmount);
+        self.oracle_price_weight = new_weight;
+        self.last_oracle_update = Clock::get()?.unix_timestamp;
+        Ok(())
+    }
 }

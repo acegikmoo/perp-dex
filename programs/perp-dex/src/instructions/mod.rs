@@ -15,3 +15,9 @@ pub use withdraw::*;
 
 mod init_oracle;
 pub use init_oracle::*;
+
+mod fill_methods;
+pub use fill_methods::*;
+
+mod fill_order;
+pub use fill_order::*;
