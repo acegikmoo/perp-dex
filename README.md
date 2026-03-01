@@ -8,9 +8,9 @@
 - [x] User, Order, Position accounts
 - [x] Deposit and withdraw
 - [x] Oracle init
-- [ ] Place order
-- [ ] Fill with AMM
-- [ ] Fill with order matching
-- [ ] Error handling + safety math
+- [x] Place order
+- [x] Fill with AMM
+- [x] Fill with order matching
+- [x] Error handling + safety math
 - [ ] Maybe zero copy optimization, like drift
 - [ ] Test in litesvm
